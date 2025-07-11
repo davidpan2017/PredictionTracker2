@@ -1,0 +1,129 @@
+Download from https://github.com/davidpan2017/AdminDefault.git
+
+Run following to start web site
+npm install  
+npm start
+
+To run electron application:
+�	For development with hot reloading:
+
+npm run electron-dev
+
+�	To build the electron production version:
+npm run electron-pack
+
+PS C:\react\Admin\default> npx cap init
+[?] What is the name of your app?
+    This should be a human-friendly app name, like what you'd see in the App Store.
+√ Name ... default-velzon-thunk
+[?] What should be the Package ID for your app?
+    Package IDs (aka Bundle ID in iOS and Application ID in Android) are unique identifiers for apps. They must be in
+    reverse domain name notation, generally representing a domain name that you or your company owns.
+√ Package ID ... com.example.app
+√ Creating capacitor.config.ts in C:\react\Admin\default in 4.80ms
+[success] capacitor.config.ts created!
+
+Next steps:
+https://capacitorjs.com/docs/getting-started#where-to-go-next
+[?] Join the Ionic Community! 💙
+    Connect with millions of developers on the Ionic Forum and get access to live events, news updates, and more.
+× Create free Ionic account? ... yes
+
+PS C:\react\Admin\default> npm run build
+
+> default-velzon-thunk@4.3.0 build
+> react-scripts build
+
+Creating an optimized production build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Compiled with warnings.
+
+Warning
+(11:142818) autoprefixer: Replace color-adjust to print-color-adjust. The color-adjust shorthand is currently deprecated.
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+File sizes after gzip:
+
+  3.13 MB    build\static\js\main.d5f83b8c.js
+  212.68 kB  build\static\css\main.20e9d451.css
+  2.65 kB    build\static\js\685.e547b092.chunk.js
+
+
+  The bundle size is significantly larger than recommended.
+Consider reducing it with code splitting: https://goo.gl/9VhYWB
+You can also analyze the project dependencies: https://goo.gl/LeUzfb
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+
+https://capacitorjs.com/docs/android#adding-the-android-platform
+npm install @capacitor/android
+npx cap init
+npx cap add android
+
+Use following to build android app   
+npx cap run android
+
+List all connected devices
+ adb devices
+
+ list installed apps on the emulator or device
+ adb -s emulator-5554 shell pm list packages
+ adb -s emulator-5556 shell pm list packages
+
+ adb -s emulator-5556 shell monkey -p com.example.app -c android.intent.category.LAUNCHER 1
+
+ deploy to android emulator
+ npx cap run android --target emulator-5556
+ npx cap run android --target emulator-5558
+
+ Seach for app on android emulator
+ adb -s emulator-5556 shell pm list packages | findstr com.example.app
+
+ How to update the app on android emulator
+ npm run build
+ npx cap copy android
+ npx cap sync android
+ npx cap run android --target emulator-5554
+ npx cap run android --target emulator-5556
+ npx cap run android --target emulator-5558
+ 
+To properly set up Capacitor for this Vite + React project:
+
+First install required dependencies:
+npm install @capacitor/core @capacitor/cli
+npm install @capacitor/android @capacitor/ios
+
+Initialize Capacitor (will use existing capacitor.config.ts):
+npx cap add android
+npx cap add ios
+
+Build the Vite project (required before sync):
+npm run build
+
+Sync with native platforms:
+npx cap sync
+
+Start androd simulartor
+
+
+List all connected devices
+ adb devices
+
+ npx cap run android --target emulator-5554
+ 
+ When starting with androd debug app, deploy with
+  npx cap run android --target Pixel_8_Pro

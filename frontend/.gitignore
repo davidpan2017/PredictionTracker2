@@ -1,0 +1,11 @@
+*.exe
+*.asar
+# Folders with files > 10MB
+/frontend/node_modules/
+/backend/node_modules/
+/default/.vs/
+/default/AdminDefaultMobile/
+/default/android/
+/default/build/
+/default/dist/
+/default/node_modules/

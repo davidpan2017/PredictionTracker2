@@ -1,0 +1,12 @@
+2025-06-01
+Downloaded and installed the latest version of the software from the official website https://velzon.themesbrand.com/user-dashboard
+React Js version is used.
+
+Updated the project to support electron and react web.
+
+Updated src/assets/scss/theme.scss
+//Fix for androd status bar and top menu overlay
+.navbar-header {
+    padding-top: calc(env(safe-area-inset-top, 0) + 1px);
+    top: env(safe-area-inset-top, 0);
+}

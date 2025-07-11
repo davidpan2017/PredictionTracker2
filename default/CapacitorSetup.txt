@@ -1,0 +1,7 @@
+Step to Convert bolt.new project to capacitor project
+
+Use Cline with following prompt
+1. inspect the project in bolt\aiprice\project folder
+2. setup capacitor properly for this project
+3. After deploying to android, the top bar of android like wifi, battery, camera etc is overlaid with the app. The app top menu is not clickable. Seems happening for all app created with capacitor.
+4. proceed with implementing
